@@ -1,11 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <title>My First Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Missama | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0f172a',
+                        cardBg: '#1e293b',
+                        accentBlue: '#38bdf8',
+                        accentPurple: '#818cf8',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <h1>Hello, Tanzania!</h1>
-  <p>My name is Adrian Missama.</p>
+<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-accentBlue selection:text-darkBg">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-darkBg/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-extrabold bg-gradient-to-r from-accentBlue to-accentPurple bg-clip-text text-transparent">
+                Adrian.dev
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-accentBlue transition-colors">About</a>
+                <a href="#skills" class="hover:text-accentBlue transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-accentBlue transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-accentBlue transition-colors">Contact</a>
+            </div>
+            <a href="#contact" class="bg-accentBlue text-darkBg px-4 py-2 rounded-full font-semibold text-sm hover:bg-sky-400 transition-all shadow-lg shadow-accentBlue/20">
+                Let's Connect
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex items-center justify-center pt-16 px-6 relative overflow-hidden">
+        <!-- Background Glow Effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accentPurple/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-accentBlue text-xs font-semibold uppercase tracking-wider mb-6">
+                Form One Computer Science Student
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6">
+                Hi, I'm <span class="bg-gradient-to-r from-accentBlue via-indigo-400 to-accentPurple bg-clip-text text-transparent">Adrian Missama</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Welcome to my digital space! I'm passionate about coding, solving logic puzzles, and building cool projects as I embark on my computer science journey.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="w-full sm:w-auto bg-accentBlue text-darkBg font-bold px-8 py-3.5 rounded-xl hover:bg-sky-400 transition-all shadow-xl shadow-accentBlue/20 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-code"></i> View My Projects
+                </a>
+                <a href="#about" class="w-full sm:w-auto bg-cardBg border border-slate-700 text-slate-200 font-semibold px-8 py-3.5 rounded-xl hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-user"></i> About Me
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 border-t border-slate-800/80 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-3">About Me</h2>
+                <div class="w-16 h-1 bg-accentBlue mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-cardBg p-8 rounded-2xl border border-slate-700/60 shadow-xl relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-accentBlue to-accentPurple rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                    <div class="relative">
+                        <div class="w-16 h-16 bg-accentBlue/10 text-accentBlue rounded-xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">My Journey Begins Here</h3>
+                        <p class="text-slate-400 leading-relaxed">
+                            As a Form One student diving into Computer Science, I am eager to explore how software and hardware work together. From understanding basic algorithms to designing web pages, every day brings a new puzzle to solve.
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-lg bg-accentBlue/10 text-accentBlue flex items-center justify-center shrink-0 mt-1">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Form One Student</h4>
+                            <p class="text-slate-400 text-sm">Building a rock-solid foundation in computer logic, mathematics, and science.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-lg bg-accentPurple/10 text-accentPurple flex items-center justify-center shrink-0 mt-1">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Tech Enthusiast</h4>
+                            <p class="text-slate-400 text-sm">Constantly experimenting with HTML, CSS, JavaScript, and beginner programming concepts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 border-t border-slate-800/80">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-3">Skills & Technologies</h2>
+                <div class="w-16 h-1 bg-accentBlue mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                <!-- Skill Card -->
+                <div class="bg-cardBg p-6 rounded-2xl border border-slate-800 text-center hover:border-accentBlue/50 transition-all group">
+                    <div class="text-4xl text-orange-400 mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">HTML5</h4>
+                </div>
+                <div class="bg-cardBg p-6 rounded-2xl border border-slate-800 text-center hover:border-accentBlue/50 transition-all group">
+                    <div class="text-4xl text-blue-400 mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">CSS3</h4>
+                </div>
+                <div class="bg-cardBg p-6 rounded-2xl border border-slate-800 text-center hover:border-accentBlue/50 transition-all group">
+                    <div class="text-4xl text-yellow-400 mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">JavaScript</h4>
+                </div>
+                <div class="bg-cardBg p-6 rounded-2xl border border-slate-800 text-center hover:border-accentBlue/50 transition-all group">
+                    <div class="text-4xl text-accentBlue mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">Problem Solving</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 border-t border-slate-800/80 bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight mb-3">Featured Projects</h2>
+                <div class="w-16 h-1 bg-accentBlue mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-cardBg rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-accentBlue text-xs font-bold uppercase tracking-wider bg-accentBlue/10 px-3 py-1 rounded-full">Web Design</span>
+                            <div class="flex space-x-3 text-slate-400 text-lg">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">My First Portfolio Page</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            A clean, responsive personal website built entirely from scratch to showcase my entry into web development.
+                        </p>
+                    </div>
+                    <div class="px-8 py-4 bg-slate-800/50 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Status: Completed</span>
+                        <a href="#" class="text-accentBlue text-sm font-semibold hover:underline flex items-center gap-1">
+                            View Code <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-cardBg rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-accentPurple text-xs font-bold uppercase tracking-wider bg-accentPurple/10 px-3 py-1 rounded-full">Logic & Math</span>
+                            <div class="text-slate-400 text-lg">
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Interactive Calculator</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            A simple JavaScript calculator that handles basic arithmetic operations with a neat user interface.
+                        </p>
+                    </div>
+                    <div class="px-8 py-4 bg-slate-800/50 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Status: In Progress</span>
+                        <a href="#" class="text-accentBlue text-sm font-semibold hover:underline flex items-center gap-1">
+                            View Code <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 border-t border-slate-800/80">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold tracking-tight mb-3">Get In Touch</h2>
+            <div class="w-16 h-1 bg-accentBlue mx-auto rounded-full mb-6"></div>
+            <p class="text-slate-400 mb-10">
+                Have a question or want to chat about tech and programming? Feel free to reach out!
+            </p>
+            <div class="bg-cardBg p-8 rounded-2xl border border-slate-800 shadow-xl max-w-md mx-auto">
+                <div class="flex items-center justify-center space-x-6 text-2xl text-slate-300 mb-8">
+                    <a href="#" class="hover:text-accentBlue transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="hover:text-accentBlue transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-accentBlue transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <a href="mailto:adrianmissama@example.com" class="block w-full bg-accentBlue text-darkBg font-bold py-3 rounded-xl hover:bg-sky-400 transition-all shadow-lg shadow-accentBlue/20">
+                    Send Me an Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800/80 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Adrian Missama. All rights reserved. Built with passion and code.</p>
+    </footer>
+
 </body>
 </html>
